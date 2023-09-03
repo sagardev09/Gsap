@@ -1,4 +1,5 @@
 import './globals.css'
+import { PageProvider } from '@/context/pageContext'
 
 
 
@@ -11,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <PageProvider>
+        <body>{children}</body>
+      </PageProvider>
     </html>
   )
 }
